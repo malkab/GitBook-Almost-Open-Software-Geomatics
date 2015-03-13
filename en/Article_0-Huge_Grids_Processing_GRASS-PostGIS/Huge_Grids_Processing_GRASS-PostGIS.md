@@ -1,7 +1,10 @@
-# Introduction chapter 1
+# Huge Grids Processing with GRASS 7 and PostGIS 2
 
-FILE: en/cap1/00-Intro.md
+__TAGS:__ grids, grass, postgis, concurrency
 
-This is the introduction for chapter 1.
+## Motivation
 
-![This is an image](assets/preview.png)
+This workflow was motivated by the need to compute a regular territorial grid
+over the full territory of Andalusia, the southern-most spanish region.
+Andalusia has an area of 87,268 km<sup>2</sup>, and different sized grids were
+to be generated. The starting point was the 

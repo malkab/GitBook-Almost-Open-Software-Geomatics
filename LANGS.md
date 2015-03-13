@@ -1,2 +1,2 @@
 <!--- * [Español](es/) -->
-* [English](en/) :uk:
+* [English](en/)

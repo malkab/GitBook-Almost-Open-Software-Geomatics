@@ -1,7 +1,5 @@
-# GitBook Template
+# malkab's Articles
 
-This is a template for a GitBook project. It is inspired by several GitBook
-templates around GitHub. It is customized for Geographica documents.
+This is a set of articles published in different sources regarding open source
+and geomatics.
 
-This file is ignored by GitBook and only serves its purpose as the GitHub
-README.md.

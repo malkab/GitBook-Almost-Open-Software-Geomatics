@@ -1,3 +1,5 @@
+drop schema affine cascade;
+
 /*
 
   Affine transformations in PostGIS examples.
@@ -27,3 +29,31 @@ create table affine.axis(
 
 \copy affine.data from 'affine_data.csv' with delimiter '|' csv header quote '"' encoding 'utf-8'
 \copy affine.axis from 'affine_axis.csv' with delimiter '|' csv header quote '"' encoding 'utf-8'
+
+
+
+-- Transformations with PostGIS 2
+
+-- Translate -1000,-500
+
+insert into affine.data
+select 2, 'Translate -1000,-500.',
+       st_translate(
+         (select geom from affine.data where gid=1),
+	 -1000,-500);
+
+-- Rotate PI/3 around the x axis
+
+insert into affine.data
+select 3, 'Rotation of PI/3 radians around the x axis.',
+       st_rotatex(
+         (select geom from affine.data where gid=1),
+	 pi()/3);
+
+-- Rotate PI/3 around the y axis
+
+insert into affine.data
+select 4, 'Rotation of PI/3 radians around the y axis.',
+       st_rotatey(
+         (select geom from affine.data where gid=1),
+	 pi()/3);

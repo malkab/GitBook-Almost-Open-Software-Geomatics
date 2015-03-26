@@ -68,21 +68,21 @@ PostGIS includes functions to easily apply basic affine transformations to
 geometries, both in 2D and 3D. We cover only 2D transformations in this article.
 For example, to translate a geometry, we can use __st_translate__:
 
-    ```sql
-    geometry st_translate(geometry g1, float deltax, float deltay);
-	```
+```sql
+geometry st_translate(geometry g1, float deltax, float deltay);
+```
 
 __st_translate__ takes a geometry _g1_ and two translate factors, _deltax_ and
 _deltay_, that moves the geometry in x and y components. PostGIS does this just
 by translating all vertex in the polygon by this magnitude. To move the polygon
 1000 meters left and 500 down:
 
-    ```sql
-	select st_translate(
-	  (select geom from affine.data where gid=1),
-	  -1000,
-	  -500);
-    ```
+```sql
+select st_translate(
+  (select geom from affine.data where gid=1),
+  -1000,
+  -500);
+```
 	  
 The effect of this translation is:
 
@@ -90,28 +90,28 @@ The effect of this translation is:
 
 Rotations are also easy, using functions __st_rotatex__ and __st_rotatey__:
 
-    ```sql
-	geometry st_rotatex(geom g1, float radians);
-	```
+```sql
+geometry st_rotatex(geom g1, float radians);
+```
 
 This function rotates geometry _g1_ _radians_ radians around the x axis:
 
-    ```sql
-	select st_rotatex(
-	  (select geom from affine.data where gid=1),
-	  pi()/3);
-    ```
+```sql
+select st_rotatex(
+  (select geom from affine.data where gid=1),
+  pi()/3);
+```
 
 ![Rotation 1](assets/02.png)
 
 Note that the distortion of the polygon is due to project to a plane a rotation
 on the x axis \(\pi\)/3 radians. Same to rotate around the y axis:
 
-    ```sql
-	select st_rotatey(
-	  (select geom from affine.data where gid=1),
-	  pi()/3);
-    ```
+```sql
+select st_rotatey(
+  (select geom from affine.data where gid=1),
+  pi()/3);
+```
 
 ![Rotation 2](assets/03.png)
 

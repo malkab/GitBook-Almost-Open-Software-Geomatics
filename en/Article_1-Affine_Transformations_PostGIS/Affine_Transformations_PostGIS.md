@@ -117,5 +117,7 @@ select st_rotatey(
 
 
 
+KATEX test: $$\pi$$ $$a \ne 0$$
 
+$$f(x) = \int_{-\infty}^\infty \hat f(\xi)$$
 

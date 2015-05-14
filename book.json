@@ -3,9 +3,9 @@
     "title": "(Almost) Open Source Geomatics",
     "description": "Description",
     "language": "en",
-    "styles": {
-	"website": "styles/website.css"
-    },
+    // "styles": {
+    // 	"website": "styles/website.css"
+    // },
     "plugins": ["mathjax", "image-captions"],
     "pluginsConfig": {
 	"mathjax": {

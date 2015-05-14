@@ -26,3 +26,4 @@ complejidad sin ganancias en las capacidades de análisis del modelo que merezca
 la pena.
 
 ![Diagrama ERM](assets/ERM_Diagram.png)
+

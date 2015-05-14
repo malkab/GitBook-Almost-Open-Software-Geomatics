@@ -1,4 +1,11 @@
 {
+    "gitbook": ">=2.0.0",
+    "title": "(Almost) Open Source Geomatics",
+    "description": "Description",
+    "language": "en",
+    "styles": {
+	"website": "styles/website.css"
+    },
     "plugins": ["mathjax", "image-captions"],
     "pluginsConfig": {
 	"mathjax": {
@@ -7,5 +14,8 @@
 	"image-captions": {
 	    "caption": "_CAPTION_"
 	}
+    },
+    "variables": {
+	"varA": "Var A"
     }
 }

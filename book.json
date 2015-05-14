@@ -3,6 +3,9 @@
     "pluginsConfig": {
 	"mathjax": {
 	    "forcesSVG": true
+	},
+	"image-captions": {
+	    "caption": "_CAPTION_"
 	}
     }
 }

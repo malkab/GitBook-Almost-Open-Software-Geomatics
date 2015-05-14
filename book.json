@@ -12,7 +12,7 @@
 	}
     },
     "styles": {
-    	"website": "styles/webdddsite.css"
+    	"website": "styles/website.css"
     },
     "variables": {
 	"varA": "Var A"

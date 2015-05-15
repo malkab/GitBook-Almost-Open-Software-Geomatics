@@ -11,9 +11,9 @@
 	    "caption": "_CAPTION_"
 	}
     },
-    "styles": {
-    	"website": "styles/website.css"
-    },
+    // "styles": {
+    // 	"website": "styles/website.css"
+    // },
     "variables": {
 	"varA": "Var A"
     }

@@ -6,12 +6,11 @@
     "pluginsConfig": {
 	"mathjax": {
 	    "forcesSVG": true
-	},
-	"image-captions": {
-	    "caption": "_CAPTION_"
 	}
     },
-
+    "styles": {
+    	"website": "styles/website.css"
+    },
     "variables": {
 	"varA": "Var A"
     }

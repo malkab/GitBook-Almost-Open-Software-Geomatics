@@ -3,7 +3,7 @@ figure {
     padding: 10px 0;
 }
 
-caption {
+figcaption {
     clear:left;
     margin: 0.75em 0px;
     text-align: left;

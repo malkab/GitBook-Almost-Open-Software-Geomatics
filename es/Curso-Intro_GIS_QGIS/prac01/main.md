@@ -14,7 +14,7 @@ En esta práctica veremos los efectos, a menudo desastrosos, que puede tener el 
 
 Antes de cargar una capa, abrimos el menú __Configuración>opciones>SRC__. Nos aseguramos que la opción __SRC para nuevas capas__ tiene activada la opción __Preguntar SRC__. De esta manera, cada vez que carguemos en _QGIS_ una capa que no tenga definido el CRS de forma explícita (cada formato de dato lo hace de una manera diferente), nos pedirá que seleccionemos el correcto.
 
-![SRC para capa nueva](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica01/00-SRC_capa_nueva.png)
+![SRC para capa nueva](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica01/00-SRC_capa_nueva.png)
 
 Como base de referencia vamos a utilizar las ortofotografías pancromáticas de máxima actualidad (al menos a fecha de Mayo de 2015) del [Plan Nacional de Ortofotografía Aérea del Instituto Geográfico Nacional][0], concretamente los mosáicos pertenecientes a las hojas de la seria 1:50.000 983 y 1001, donde se encuadra el municipio de Chucena. Se encuentran en el directorio __Raster__, y responden a los siguientes nombres:
 

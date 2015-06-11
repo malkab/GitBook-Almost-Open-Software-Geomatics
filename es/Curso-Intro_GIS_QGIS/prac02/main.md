@@ -45,7 +45,7 @@ Como contexto de digitalización, procederemos primero a cagar la capa de munici
 "MUNICIPIO" ILIKE 'chucena'
 ```
 
-![Filtrado de capa](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/00-Filtro.png)
+![Filtrado de capa](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/00-Filtro.png)
 
 - __ILIKE__ hace una búsqueda de texto sin tener en cuenta las mayúsculas. Pulsamos __Aceptar__, pero no salimos de las propiedades.
 
@@ -57,7 +57,7 @@ Ahora vamos a alterar la semiología de la capa para que el relleno sea transpar
 
 - en la parte derecha del cuadro de diálogo aparecerá las propiedades del tipo de semiología __Relleno sencillo__. Lo que nos interesa es alterar el tipo de relleno, en la sección __Colores__. Pulsamos sobre la flecha invertida y seleccionamos __Relleno transparente__. Cambiamos asimismo el color del contorno pulsando en el color y seleccionamos un color llamativo, como un rojo.
 
-![Semiologia](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/10-Semiologia.png)
+![Semiologia](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/10-Semiologia.png)
 
 - cargamos adicionalmente las dos ortofotos del PNOA, ya que las vamos a utilizar como base de digitalización.
 
@@ -71,7 +71,7 @@ Para crear una capa, accedemos al menú __Capa > Nueva > Nueva capa de archivo s
 
 - de igual manera, creamos otro campo que sea __FECHA_ALTA__, de tipo __Fecha__, y por último, uno llamado __PRESUPUEST__ (en una Shapefile, los nombres de los campos no pueden tener más de 10 caracteres de largo), de tipo __Número decimal__, de anchura 15 y precisión 2;
 
-![Prototipo shape](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/20-Prototipo_shape.png)
+![Prototipo shape](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/20-Prototipo_shape.png)
 
 - pulsamos __Aceptar__ y el sistema nos preguntará por un directorio y nombre para dejar la shape. Hay que tener en cuenta que una Shapefile se compone de mínimo 3 ficheros principales: __.shp__ (datos geométricos), __.dbf__ (datos alfanuméricos) y __.shx__ (índice espacial). Llamaremos a la shape __Zonificacion__.
 
@@ -83,21 +83,21 @@ Para comenzar a editar la nueva capa, debemos primero habilitar la edición. Nin
 
 - hacemos click derecho sobre la capa en el _TOC_ y seleccionamos __Conmutar edición__.
 
-![Conmutar edición](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/30-Conmutar_edicion.png)
+![Conmutar edición](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/30-Conmutar_edicion.png)
 
 Una vez la edición está conmutada aparece un icono de lápiz a la izquierda del nombre de la capa en el _TOC_, indicando que dicha capa está en edición. Ojo, podemos tener muchas capas en edición. Las acciones de edición recaerán en última instancia en aquella capa que está seleccionada en el _TOC_, marcada con un resalte.
 
 La barra de herramientas de edición se ha activado. Ahora podemos seleccionar la herramienta necesaria para lo que queramos hacer. Por ahora, dibujar un simple polígono, con lo que seleccionaremos la herramienta __Añadir objeto espacial__.
 
-![Barra edición](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/40-Barra_edicion.png)
+![Barra edición](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/40-Barra_edicion.png)
 
 Ahora podemos ir definiendo el polígono vértice a vértice. El proceso puede ser interrumpido en cualquier momento para seleccionar herramientas de navegación y centrar la vista, pudiéndose retomar cuando haga falta seleccionando de nuevo la herramienta de __Añadir objeto espacial__. Para terminar de digitalizar, se pulsa el botón derecho (que no insertará ningún vértice).
 
-![Digitalización](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/50-Digitalizacion.png)
+![Digitalización](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/50-Digitalizacion.png)
 
 En cuanto la geometría del nuevo objeto ha sido definida, __Quantum__ nos solicita su información alfanumérica mostrando un cuadro de diálogo donde podemos introducir los datos que definimos anteriormente. Las fechas han de introducirse en formato __ISO__ (año-mes-día), y los números decimales con un punto en lugar de coma.
 
-![Datos alfanuméricos](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/60-Alfanumerico.png)
+![Datos alfanuméricos](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/60-Alfanumerico.png)
 
 El polígono se verá definido con una marca encima de cada uno de sus vértices. Comoquiera que la capa aún está en edición, dichos datos no han sido guardados aún en la capa. Para ello se ha de pulsar la herramienta de __Guardar cambios en la capa__ o desactivar la edición, en cuyo momento nos preguntará si queremos guardar los datos.
 
@@ -117,7 +117,7 @@ Crear una Shapefile lineal llamada __vias_comunicacion__ y proporcionarle los at
 
 Para asegurar la precisión geométrica de las geometrías, es muy importante utilizar la edición topológica. Podemos alterar el comportamiento topológico de cara a la edición de nuestras capas gracias a la opción __Configuración > Opciones de autoensamblado__.
 
-![Autoensamblado](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/70-Autoensamblado.png)
+![Autoensamblado](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/70-Autoensamblado.png)
 
 En este cuadro de diálogo podremos definir el comportamiento topológico de nuestras capas. Los parámetros configurables son:
 
@@ -133,11 +133,11 @@ En este cuadro de diálogo podremos definir el comportamiento topológico de nue
 
 La información alfanumérica también se ve afectada por la edición, como no podía ser de otra manera. Cuando una capa está en edición, sus datos alfanuméricos también pueden ser editados gracias al control tabla.
 
-![Icono tabla](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/80-Icono_tabla.png)
+![Icono tabla](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/80-Icono_tabla.png)
 
 Las herramientas para trabajar con la tabla son, de izquierda a derecha:
 
-![Tabla](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/90-Tabla.png)
+![Tabla](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/90-Tabla.png)
 
 - __conmutar edición:__ misma función que el conmutar edición de la barra de edición estándar;
 
@@ -167,7 +167,7 @@ Las herramientas para trabajar con la tabla son, de izquierda a derecha:
 
 Vamos a crear un nuevo campo llamado __area__ en la tabla __da02_term_munic__. Entramos en edición y pulsamos la herramienta correspondiente, rellenando los datos en el diálogo que se nos muestra:
 
-![Nuevo campo](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/100-Nuevo_campo.png)
+![Nuevo campo](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/100-Nuevo_campo.png)
 
 Vamos a calcular ahora el área de cada municipio en kilómetros cuadrados almacenando el resultado en la columna que acabamos de crear. Para ello activamos la __calculadora de campos__. Seleccionamos la opción __Actualizar campo existente__ y seleccionamos el campo recién creado. Ahora tenemos que crear la expresión de cálculo en la ventana __Expresión__. Puede ser cualquier expresión que involucre fórmulas matemáticas o de manipulación de texto, incluyendo los datos almacenados en otros campos. En la sección __Funciones__ se nos muestra, a modo de recordatorio, el catálogo de operaciones disponibles. Se organizan en diversas categorías, como por ejemplo operadores matemáticos y condicionales, operaciones matemáticas como valores absolutos y demás, conversiones de tipos de datos, operaciones con fecha y hora, con cadena de caracteres, etc. La que nos interesa es la sección __Geometría__, donde están las operaciones que tienen en cuenta a la parte geométrica de la información geográfica. En nuestro caso, la operación que nos interesa es __$area__, que devuelve el área del polígono. Este área será devuelta en las unidades del sistema de coordenadas de la capa, que al ser __ETRS89 UTM29N__ son metros cuadrados. Por lo tanto, debemos dividir dicho valor por 1.000.000 para obtener los metros cuadrados:
 
@@ -175,7 +175,7 @@ Vamos a calcular ahora el área de cada municipio en kilómetros cuadrados almac
 $area / 1000000
 ```
 
-![Cálculo de área](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica02/110-Calculadora.png)
+![Cálculo de área](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/110-Calculadora.png)
 
 Pulsamos sobre __Aceptar__ y el cálculo se realiza para todos los municipios.
 

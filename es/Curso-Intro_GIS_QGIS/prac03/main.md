@@ -10,7 +10,7 @@ Quantum GIS dispone de potentes opciones para la representación de información
 
 Accedemos a la semiología de una capa con click derecho sobre la misma en el TOC y __Propiedades__, o directamente con un doble click.
 
-<!-- ![Sección de semilogía](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica03/00-Semiologia.png) -->
+<!-- ![Sección de semilogía](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica03/00-Semiologia.png) -->
 
 El desplegable que indica "Símbolo único" sirve para indicar el tipo general de representación de la capa, de los que hay siete. Nos centraremos en:
 

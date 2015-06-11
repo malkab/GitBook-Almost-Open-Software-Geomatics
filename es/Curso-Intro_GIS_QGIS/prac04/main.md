@@ -54,11 +54,11 @@ A nivel autonómico, la __IDE de Andalucía (IDEA)__ del Instituto de Cartograf�
 
 Añadir capas procedentes de un servicio OGC a un proyecto Quantum no es muy diferente a añadir datos de cualquier otra fuente de información. Para añadir un servicio __WMS__, pulsar sobre el primer botón, para un __WFS__, el tercero.
 
-![Botones OGC](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica04/00-Botones_OGC.png)
+![Botones OGC](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica04/00-Botones_OGC.png)
 
 Al pulsar sobre el botón de __Añadir capa WMS/WMTS__ aparecerá un cuadro de diálogo donde Quantum nos mostrará los orígenes de servidores WMS que ya hayamos utilizado anteriormente. Dado que es la primera vez que lo usamos, estará vacío. Pulsamos en __Nuevo__ y nos aparecerá un cuadro de diálogo donde configurar un nuevo origen de datos WMS:
 
-![Nuevo WMS](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica04/01-Nuevo_WMS.png)
+![Nuevo WMS](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica04/01-Nuevo_WMS.png)
 
 Le asignamos un nombre al servicio (puramente descriptivo) en el campo __Nombre__ y en __URL__ introducimos la raíz del servicio. Algunos servicios WMS precisan de acreditación usuario / contraseña, que podría ser introducido abajo. El resto de opciones son utilizadas por los creadores de servicios para depurarlos, por los que no deberíamos necesitar utilizarlos en servicios bien conformados según el estándar. La última opción, __Transformación de mapa de píxeles suave__ sí podría ser de interés a la hora de generar cartografía en servicios que no aplican correctamente técnicas de _antialiasing_ a la imagen, aunque esto también es raro. Al activarlo, Quantum le hará un tratamiento de suavizado a la imagen recibida que hará que tenga, en casos extremos, un mejor aspecto. Lo normal es que este tratamiento lo aplique el servidor y sólo estaríamos ralentizando todo el proceso (y posiblemente estropeando una imagen ya correcta) si lo repetimos en el cliente, es decir, en Quantum. Pulsamos __Aceptar__ cuando acabemos.
 
@@ -66,11 +66,11 @@ Volvemos al cuadro anterior y seleccionamos en el desplegable superior el servic
 
 Como paso adicional, en caso de haber seleccionado más de una capa, podremos, en la pestaña __Orden de capas__, alterar el orden de dibujado de las mismas.
 
-![Configurión WMS](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica04/02-Configuracion_WMS.png)
+![Configurión WMS](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica04/02-Configuracion_WMS.png)
 
 Si todo va bien (cuidado con las escalas de visualización), Quantum solicitará la imagen al servidor y la incluirá en el mapa:
 
-![Catastro](https://raw.githubusercontent.com/malkab/GitBook-Curso_ETSAS-Intro_GIS/master/assets/Practica04/03-Catastro.png)
+![Catastro](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica04/03-Catastro.png)
 
 ## WFS
 

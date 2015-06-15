@@ -9,6 +9,6 @@
 
 * [Máster SIG Universidad de Sevilla](Master_GIS_US/README.md)
   * [PostGIS](Master_GIS_US/PostGIS/README.md)
-    * [Práctica final PostGIS](Master_GIS_US/PostGIS/Practica_final/README.md)
-      * [Enunciado de la práctica](Master_GIS_US/PostGIS/Practica_final/00-Enunciado/00-Enunciado.md)
-	  * [Solución](Master_GIS_US/PostGIS/Practica_final/01-Solucion/01-Solucion.md)
+    * [Práctica final PostGIS](Master_GIS_US/PostGIS/900-Practica_final/README.md)
+      * [Enunciado de la práctica](Master_GIS_US/PostGIS/900-Practica_final/00-Enunciado/00-Enunciado.md)
+	  * [Solución](Master_GIS_US/900-PostGIS/Practica_final/01-Solucion/01-Solucion.md)

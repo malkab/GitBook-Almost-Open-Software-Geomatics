@@ -12,6 +12,8 @@ Como ya hemos hecho en ocasiones anteriores, comenzaremos el modelado con un an�
 
 ![Diagrama ERM](assets/ERM_Diagram.png)
 
+kkd
+
 El modelo es bastante sencillo. Un modelo se puede dar por terminado cuando se cumplen las dos siguientes condiciones:
 
 * __el modelo está normalizado:__ no se detecta ninguna causa de desnormalización en ninguna tabla;

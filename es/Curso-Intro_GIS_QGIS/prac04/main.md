@@ -1,87 +1,145 @@
-# Servicios interoperables
+# Representación y semiología cartográfica
 
-Se entiende por __servicio interoperable__ un mecanismo de transmisión de información, generalmente a través de Internet, destinado a un fin en concreto y que se basa en un estándar de comunicación bien conocido tanto por la aplicación que solicita los datos (llamada __aplicación cliente__) como por la que los produce (llamada __aplicación servidora__). Dicho estándar de comunicación y transferencia de información encapsula y aisla tanto los procedimientos de generación de la misma en la aplicación servidora como el uso que se hace de la misma en la aplicación cliente. El éxito de un estándar de servicio interoperable se basa en la difusión y transparencia de su diseño y bases de implementación, lo que hace que diversos fabricantes de software puedan adoptarlos y basar sus productos en ellos, tanto propietarios como de software libre, facilitando, de ahí lo de __interoperable__, que el software de diferentes fabricantes pueda intercambiar información.
+Quantum GIS dispone de potentes opciones para la representación de información geográfica destinada a la producción de cartografía temática. En el caso de información vectorial, las opciones de semiología dependen fundamentalmente de dos factores:
 
-En el ámbito de la información geográfica, los servicios interoperables más utilizados son los que diseña el organismo internacional __[Open Geospatial Consortium (OGC)][0]__. El __OGC__ es un conglomerado de empresas, agencias gubernamentales, universidades y centros de investigación que diseñan estándares para el intercambio y publicación de información geográfica. Es importante entender que el __OGC__ no hace programas, simplemente indica cómo deberían funcionar para comunicarse entre ellos. Los detalles de la implementación de tales estándares queda al diseño de los diferentes fabricantes de software.
+- la naturaleza geométrica del vector: punto, línea o polígono;
 
-Los estándares del __OGC__ más utilizados son los siguientes:
+- la naturaleza discreta o continua del dato alfanumérico sobre el que se va a basar el tratamiento temático.
 
-- __Web Map Service (WMS):__ el WMS sirve para la publicación de mapas, es decir, datos representados semiológicamente. El formato devuelto por el servicio es una imagen;
+# Semiología de símbolo único: simbología por capas
 
-- __Web Feature Service (WFS):__ el WFS sirve para la publicación de datos vectoriales. El formato devuelto por el servicio es información vectorial en formato GML (por defecto);
+Accedemos a la semiología de una capa con click derecho sobre la misma en el TOC y __Propiedades__, o directamente con un doble click.
 
-- __Web Coverage Service (WCS):__ el WCS sirve para la publicación de datos ráster. El formato devuelto es una matriz numérica;
+<!-- ![Sección de semilogía](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica03/00-Semiologia.png) -->
 
-- __Catalogue Service for the Web (CSW):__ el CSW es un protocolo para buscar y transmitir el contenido de grandes catálogos de información geográfica;
+El desplegable que indica "Símbolo único" sirve para indicar el tipo general de representación de la capa, de los que hay siete. Nos centraremos en:
 
-- __Web Map Tile Service (WMTS):__ el WMTS es similar al WMS en concepto, pero sirve los mapas teselados.
+- __Símbolo único:__ semiología que no hace distinciones temáticas, dibujando todas las geometrías con el mismo símbolo;
 
-Existen muchos programas servidores que implementan estos estándares. En el mundo del software libre:
+- __Categorizado:__ se usa para datos discretos. Marca categorías que son dibujadas con símbolos distintos;
 
-- __WMS, WFS, WCS, WMTS:__ principalmente, los más utilizados son __GeoServer__ y __MapServer__;
+- __Graduado:__ se usa para datos continuos. Establece en un rango de valores intervalos que son dibujados con símbolos distintos;
 
-- __CSW:__ la implementación de referencia es el __GeoNetwork__.
+- __Basado en reglas:__ es el método más flexible, permitiendo crear distinciones temáticas en las geometrías gracias a flexibles condiciones lógico-matemáticas (tanto alfanuméricas como espaciales).
 
-Los servicios anteriores suelen organizarse en un conglomerado llamado __Infraestructura de datos espaciales (IDE)__, o __Spatial Data Infrastructure (SDI)__ en inglés. Una __IDE__ típica se compone de un servicio de catálogo y multitud de servicios de datos de los anteriormente citados. El servicio más popular con diferencia es el __WMS__, ya que permite publicar mapas sin exponer los datos originales. El servicio de catálogo a veces no se incluye. Cuando esta infraestructura se combina con un portal de Internet clásico y un geovisor online, se dice que la infraestructura es un __geoportal__.
+Nos centraremos primero en el modo __Símbolo único__ para ver qué filosofía sigue Quantum a la hora de diseñar símbolos. Quantum utiliza simbología por capas, es decir, que los símbolos que utilizamos para representar líneas, puntos o polígonos se construyen gracias a capas jerarquizadas que se dibujan de abajo a arriba.
 
-[0]: http://www.opengeospatial.org/
+En la sección central a la izquierda se encuentra la jerarquía de capas de simbología. Podemos añadir nuevas capas con el símbolo __+__, eliminarlos con el símbolo __-__ y alterar su orden con las flechas arriba y abajo.
 
-# Geoportales básicos a nivel europeo, nacional y autonómico
+Cada capa aplica un tipo determinado de procedimiento gráfico. Por ejemplo, en polígonos encontramos:
 
-A nivel europeo, la IDE más importante es __[INSPIRE][3]__.
+- __Relleno sencillo:__ un color sólido con un borde;
 
-A nivel nacional, es fundamental la IDE de Catastro y el agregador nacional __IDEE__:
+- __Relleno de centroides:__ lo que se representa es el centroide del polígono con un símbolo puntual;
 
-- __IDE de Catastro de España:__ [http://www.catastro.meh.es/esp/wms.asp][1];
+- __Relleno de gradiente:__ rellena el polígono con un gradiente;
 
-- __IDE de España (IDEE):__ [http://www.idee.es/][2].
+- __Patrón de relleno de línea:__ superposición de un relleno con líneas;
 
-A nivel autonómico, la __IDE de Andalucía (IDEA)__ del Instituto de Cartografía y Estadística de Andalucía y la __Red de información ambiental (REDIAM)__ de la Consejería de Medio Ambiente son las más utilizadas:
+- __Patrón de relleno de puntos:__ relleno del polígono con puntos;
 
-- __IDEA:__ [http://www.ideandalucia.es/][4];
+- __Relleno de imagen raster:__ se rellena con una imagen;
 
-- __REDIAM:__ [http://www.juntadeandalucia.es/medioambiente/site/rediam][5].
+- __Relleno SVG:__ se utiliza una imagen SVG vectorial como relleno;
 
-[1]: http://www.catastro.meh.es/esp/wms.asp
-[2]: http://www.idee.es/
-[3]: http://inspire-geoportal.ec.europa.eu/
-[4]: http://www.ideandalucia.es/
-[5]: http://www.juntadeandalucia.es/medioambiente/site/rediam
+- __Shapeburst fill:__ gradiente interior al contorno del polígono;
 
-# Utilización de servicios OGC en Quantum
+- __Línea exterior: Línea de marcador:__ se dibuja el contorno del polígono con un marcador;
 
-## WMS
+- __Línea exterior: Línea sencilla:__ se dibuje el contorno del polígono con una línea sencilla.
 
-Añadir capas procedentes de un servicio OGC a un proyecto Quantum no es muy diferente a añadir datos de cualquier otra fuente de información. Para añadir un servicio __WMS__, pulsar sobre el primer botón, para un __WFS__, el tercero.
+Cada tipo de capa tiene sus propias opciones de configuración.
 
-![Botones OGC](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica04/00-Botones_OGC.png)
+__Ejercicio:__ dibujar las parcelas catastrales rurales de Chucena (__chucena_rustico.shp__) con un fondo azul pálido y un tramado diagonal en gris pálido.
 
-Al pulsar sobre el botón de __Añadir capa WMS/WMTS__ aparecerá un cuadro de diálogo donde Quantum nos mostrará los orígenes de servidores WMS que ya hayamos utilizado anteriormente. Dado que es la primera vez que lo usamos, estará vacío. Pulsamos en __Nuevo__ y nos aparecerá un cuadro de diálogo donde configurar un nuevo origen de datos WMS:
+__Ejercicio:__ dibujar las parcelas catastrales rurales de Chucena en blanco sólido, con borde gris oscuro y un ligero degradado interior del gris del borde al blanco interior.
 
-![Nuevo WMS](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica04/01-Nuevo_WMS.png)
+# Semiología categorizada
 
-Le asignamos un nombre al servicio (puramente descriptivo) en el campo __Nombre__ y en __URL__ introducimos la raíz del servicio. Algunos servicios WMS precisan de acreditación usuario / contraseña, que podría ser introducido abajo. El resto de opciones son utilizadas por los creadores de servicios para depurarlos, por los que no deberíamos necesitar utilizarlos en servicios bien conformados según el estándar. La última opción, __Transformación de mapa de píxeles suave__ sí podría ser de interés a la hora de generar cartografía en servicios que no aplican correctamente técnicas de _antialiasing_ a la imagen, aunque esto también es raro. Al activarlo, Quantum le hará un tratamiento de suavizado a la imagen recibida que hará que tenga, en casos extremos, un mejor aspecto. Lo normal es que este tratamiento lo aplique el servidor y sólo estaríamos ralentizando todo el proceso (y posiblemente estropeando una imagen ya correcta) si lo repetimos en el cliente, es decir, en Quantum. Pulsamos __Aceptar__ cuando acabemos.
+La semiología categorizada nos permite distinguir objetos en base a sus propiedades temáticas de una forma discreta. Primero hay que seleccionar la columna de la tabla de atributos cuyos valores vamos a utilizar para encontrar las categorías. Una vez hecho, elegimos el símbolo general de referencia en __Símbolo__ y la __Rampa de color__. Pulsamos en __Clasificar__ y Quantum leera todos los valores únicos que existen en dicha columna, asignando una categoría con su propio símbolo a cada una de ellas.
 
-Volvemos al cuadro anterior y seleccionamos en el desplegable superior el servicio recién configurado. Pulsamos en __Conectar__ y el Quantum irá a la URL del servicio y solicitará su configuración gracias a una petición llamada __GetCapabilities__. QGIS analizará la respuesta del servidor y nos mostrará la estructura de capas del mismo. En este momento, podremos configurar nuestra petición. Podemos solicitar tantas capas como queramos (algunas de ellas están disponibles en varios estilos). Tendremos que seleccionar también el tipo de imagen que queremos recibir (PNG, JPEG, etc.), así como el sistema de referencia de la petición (botón __Cambiar__ para cambiar el seleccionado por defecto). Por último, le daremos un nombre a la capa que vamos a crear a partir de la petición.
+__Ejercicio:__ sobre Chucena rústico, crear una semiología para cartografiar cada una de las masas catastrales del municipio.
 
-Como paso adicional, en caso de haber seleccionado más de una capa, podremos, en la pestaña __Orden de capas__, alterar el orden de dibujado de las mismas.
+__Ejercicio:__ hacer un mapa en el que se muestre el __tipo__ de parcela rústica:
 
-![Configurión WMS](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica04/02-Configuracion_WMS.png)
+- __U:__ urbana;
 
-Si todo va bien (cuidado con las escalas de visualización), Quantum solicitará la imagen al servidor y la incluirá en el mapa:
+- __R:__ rústica;
 
-![Catastro](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica04/03-Catastro.png)
+- __D:__ diseminado;
 
-## WFS
+- __X:__ dominio público y ajustes topográficos.
 
-La carga de __WFS__ es muy similar a la del __WMS__, más sencilla si cabe. De forma análoga, se configura un origen WFS pulsando en __Nuevo__, se conecta a él pulsando en __Conectar__ y se elige la capa a descargar y ya se puede visualizar y utilizar.
+# Semiología graduada
 
-Sin embargo, hay que tener una cosa en cuenta: como servicio de descarga que es, Quantum intentará descargar la capa completa de una sola vez. Si es pequeña, no habrá problemas, ya que la capa podrá bajar entera. Pero si es muy grande o compleja, tardará un rato, por lo que puede que Quantum arroje un error de _time out_ en la conexión, es decir, que lleva demasiado tiempo esperando sin resultado.
+La semiología graduada es similar en concepto a la __categorizada__, pero se utiliza para cartografiar datos continuos, como por ejemplo el área de un conjunto de polígonos. Sobre el rango completo de valores continuos de la magnitud se crean intervalos, que se representan cada uno con un símbolo diferente.
 
-Para solucionarlo hay dos opciones:
+Al igual que en el caso de la semiología categorizada, lo primero que se ha de seleccionar es una columna que contiene la variables que queremos cartografiar. Se selecciona a continuación un símbolo base a aplicar a todos los intervalos. A continuación, en __Clases__, se selecciona el número de intervalos en los que se quiere dividir el rango de valores de la variable. La __rampa de color__ determina los colores por defecto que se le va a aplicar a los distintos intervalos. El _Formato de leyenda__ sirve para introducir una expresión para formatear la salida de leyenda automática de cada intervalo. La __Precisión__ determina el número de decimales que deben aparecer en los límites de los intervalos.
 
-- aumentar el tiempo de espera de conexión en __Configuración > Opciones > Red > Expiró el tiempo para solicitudes de red (ms)__;
+El apartado más importante es el __Modo__. Determina el algoritmo o metodología para crear los intervalos:
 
-- no marcar, al pedir la capa, la casilla de __Cache feature__, con lo que el Quantum no intentará descargarse la capa de una sóla vez, sino que se descargará sólo las geometrías que se encuentran en ese momento en el ámbito de visualización.
+- __Intervalo igual:__ intervalos de igual anchura;
 
+- __Cuantil:__ crea los intervalos en cuanto a cuantiles;
 
+- __Jenks:__ un método estadístico para crear intervalos que estudia la distribución estadística de los valores que se encuentran en la serie;
+
+- __Desviación estándar:__ crea los intervalos a partir de la media de la serie y diversos pasos a partir de la desviación estándar de la misma;
+
+- __Pretty breaks:__ otro método estadístico para crear intervalos basados en la distribución estadística de los valores de la serie.
+
+Pulsando __Clasificar__ Quantum crea los intervalos en función de la variable y el método seleccionado. Se pueden añadir, modificar y quitar clases, así como alterar sus símbolos específicos.
+
+__Ejercicio:__ crear una graduación de las construcciones del urbano de Chucena en función de su área en metros cuadrados.
+
+# Semiología basada en reglas
+
+La semiología basada en reglas es la forma más potente de crear mapas temáticos en Quantum GIS. Permite crear categorías temáticas basadas en reglas lógico-matemáticas complejas.
+
+Para crear una regla, pulsar sobre el símbolo __+__. Aparecerá el diálogo de crear regla. En __Etiqueta__ se introducirá el nombre de la regla, y en __Descripción__ una reseña de la misma. Abajo se puede activar un intervalo de escala de visualización de la regla (lo que permite crear semiología multiescala), y abajo se define el símbolo a utilizar.
+
+El elemento principal de la regla es su filtro, definible en el campo __Filtrar__. Pulsando sobre __...__ se abre el editor de filtro, similar a la calculadora de campos. Con el editor de filtro se puede crear la expresión que debe cumplir cada geometría para calificar dentro de dicho grupo temático.
+
+Cargamos la capa __chucena_construcciones_urbana__. Se crearán distintas clasificaciones temáticas teniendo en cuenta el tipo de construcción urbana según el campo __constru__:
+
+- __ZD:__ Zona deportiva;
+
+- __SUELO:__ suelo vacante sin construir;
+
+- __Números romanos negativos:__ nivel de construcción bajo rasante;
+
+- __Números romanos positivos:__ nivel de construcción sobre rasante;
+
+- __B:__ balcón;
+
+- __TZA:__ terraza;
+
+- __P:__ patio;
+
+- __POR:__ porche;
+
+- __PI:__ piscina;
+
+- __SS:__ semisótano.
+
+__Ejercicios:__ crear las siguientes reglas:
+
+- crear una regla para filtrar las zonas deportivas en azul;
+
+- crear una regla para filtrar los patios en gris claro;
+
+- crear una regla para filtrar las construcciones de tipo desconocido (__?__) en amarillo con un rayado diagonal negro;
+
+- crear una regla para filtrar el suelo vacante de más de una hectárea en rojo claro;
+
+- crear una regla para filtrar el suelo vacante de más de una hectárea de rojo más oscuro que el anterior;
+
+- crear una regla para mostrar en verde claro las edificaciones de una planta;
+
+- crear una regla para mostrar en verde medio las edificaciones de dos plantas;
+
+- crear una regla para mostrar en verde más oscuro las edificaciones de tres plantas;
+
+- crear una regla para mostrar todas las construcciones que están a menos de 100 metros de distancia del punto con coordenadas 730.988, 4.138.149;
+
+- crear una regla para mostrar las construcciones de dos plantas que están dentro de la zona con __COD_ZONA__ igual a 1 de la capa __Zonificacion__ que creamos en la práctica anterior.

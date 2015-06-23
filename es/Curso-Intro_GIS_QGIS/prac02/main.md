@@ -165,6 +165,10 @@ Las herramientas para trabajar con la tabla son, de izquierda a derecha:
 
 - __calculadora de campos:__ herramienta para hacer calculos con los datos de las filas.
 
+## Calculadora de campos
+
+La calculadora de campos permite realizar cálculos entre campos, depositando el resultado de dichos cálculos en otro campo del tipo adecuado. QGIS dispone de un extenso repertorio de operadores lógicos, matemáticos, de texto y geométricos para componer expresiones de cálculo. 
+
 Vamos a crear un nuevo campo llamado __area__ en la tabla __da02_term_munic__. Entramos en edición y pulsamos la herramienta correspondiente, rellenando los datos en el diálogo que se nos muestra:
 
 ![Nuevo campo](https://raw.githubusercontent.com/malkab/GitBook-Almost-Open-Software-Geomatics/master/assets/Practica02/100-Nuevo_campo.png)

@@ -42,6 +42,19 @@ __Ejemplo__
 Seleccionar todas las construcciones urbanas de dos plantas.
 ```
 
+En el modo de nueva selección:
+
 ```Sql
 "constru" = "II"
 ```
+
+```
+Seleccionar del conjunto anterior las parcelas mayores de 70 metros cuadrados.
+```
+
+En el modo de selección dentro de la selección:
+
+```Sql
+$area > 70
+```
+

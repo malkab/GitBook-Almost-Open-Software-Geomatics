@@ -4,7 +4,7 @@
   * [Práctica 1: Sistemas de coordenadas](Curso-Intro_GIS_QGIS/prac01/main.md)
   * [Práctica 2: Edición de información vectorial](Curso-Intro_GIS_QGIS/prac02/main.md)
   <!-- * [Práctica 3: Selecciones](Curso-Intro_GIS_QGIS/prac03/main.md) -->
-  * [Práctica 3: Representación y semiología cartográfica](Curso-Intro_GIS_QGIS/prac03/main.md)
+  * [Práctica 3: Representación y semiología cartográfica](Curso-Intro_GIS_QGIS/prac04/main.md)
   * [Práctica 4: Servicios interoperables](Curso-Intro_GIS_QGIS/prac04/main.md)
 <!-- ** [Práctica 5: Análisis](Curso-Intro_GIS_QGIS/prac05/main.md) -->
 

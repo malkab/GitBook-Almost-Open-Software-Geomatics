@@ -23,6 +23,9 @@ Existe un polígono pequeñito pequeñito.
 
 xmin(centroid(geometry(getFeature('chucena_urbano', 'gid', 4201614))))
 
+distance(geomFromWKT('POINT(x y)'),$geometry)<100
+
+
 
 
 

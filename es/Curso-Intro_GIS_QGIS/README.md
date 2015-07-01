@@ -4,8 +4,10 @@ Prácticas del curso de introducción a los sistemas de información geográfica
 
 El contenido es el siguiente:
 
-- __[Unidad 01](prac01/main.md):__ Introducción.
-- __Unidad 02:__ Sistemas de referencia de coordenadas.
-- __Unidad 03:__ Almacenamiento, edición, consulta y representación de la información en QGIS.
-- __Unidad 04:__ Infraestructuras de Datos Espaciales y estandarización de la información geográfica.
-- __Unidad 05:__ Análisis y geoprocesamiento en QGIS.
+<!-- - __[Introducción](00-Introduccion/main.md):__ Introducción. -->
+- __Unidad 01(Unidad_01-Sistemas_referencia/main.md):__ Sistemas de referencia.
+- __Unidad 02(Unidad_02-Edicion_informacion_vectorial/main.md):__ Almacenamiento, edición, consulta y representación de la información en QGIS.
+- __Unidad 03(Unidad_03-Selecciones/main.md):__ Selecciones.
+- __Unidad 04(Unidad_04-Semiologia/main.md):__ Semiología cartográfica.
+- __Unidad 05(Unidad_05-Servicios_OGC/main.md):__ Servicios interoperables OGC.
+<!-- - __Unidad 06(Unidad_06-Analisis/main.md):__ Análisis y geoprocesamiento en QGIS. -->

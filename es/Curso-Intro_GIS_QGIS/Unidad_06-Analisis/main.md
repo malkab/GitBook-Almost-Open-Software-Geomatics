@@ -1,3 +1,24 @@
+# Vectorial
+
+Clip a todas las capas (hacer uno de ejemplo y dejar el resto ya hecho).
+
+Hacerle un Multipart to singleparts a usos del suelo.
+
+Seleccionar usos del suelo de tipo: 121. Volcarlo a shape "Zona industrial"
+
+Seleccionar carreteras: RIGE, INT. Volcarlo a shape "Carreteras aptas"
+
+Crear sobre las carreteras una capa raster a 250 metros
+
+Tomar puntos sobre ella que representen a los puertos.
+
+Utilizar r.cost.full para calcular el coste.
+
+
+
+
+
+
 # Análisis
 
 Seleccionar caja de herramientas > Vista avanzada.
@@ -74,4 +95,3 @@ X > 5
 Con CASE
 
 Cargar lámina de agua, recortarla con ZOI, crearle un campo exists y darle el valor 1.
-

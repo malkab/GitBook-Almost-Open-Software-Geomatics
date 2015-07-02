@@ -10,4 +10,4 @@ El contenido es el siguiente:
 - __[Unidad 03](Unidad_03-Selecciones/main.md):__ Selecciones.
 - __[Unidad 04](Unidad_04-Semiologia/main.md):__ Semiología cartográfica.
 - __[Unidad 05](Unidad_05-Servicios_OGC/main.md):__ Servicios interoperables OGC.
-<!-- - __[Unidad 06](Unidad_06-Analisis/main.md):__ Análisis y geoprocesamiento en QGIS. -->
+- __[Unidad 06](Unidad_06-Analisis/main.md):__ Análisis y geoprocesamiento en QGIS.

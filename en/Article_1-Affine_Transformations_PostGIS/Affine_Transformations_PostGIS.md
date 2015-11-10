@@ -100,7 +100,7 @@ select st_rotatez(
   pi()/3);
 ```
 
-![Rotation 3](assets/04.png)
+![Rotation 3](assets/04-mod.png)
 
 
 KATEX test: $$\pi$$ $$a \ne 0$$

@@ -1,5 +1,3 @@
-drop schema affine cascade;
-
 /*
 
   Affine transformations in PostGIS examples.
@@ -9,6 +7,8 @@ drop schema affine cascade;
   Geographica 2015
 
 */
+
+begin;
 
 -- Create the schema 'affine'
 
@@ -57,3 +57,13 @@ select 4, 'Rotation of PI/3 radians around the y axis.',
        st_rotatey(
          (select geom from affine.data where gid=1),
 	 pi()/3);
+
+-- Rotate PI/3 around the z axis
+
+insert into affine.data
+select 5, 'Rotation of PI/3 radians around the z axis.',
+       st_rotatez(
+         (select geom from affine.data where gid=1),
+	 pi()/3);
+
+commit;

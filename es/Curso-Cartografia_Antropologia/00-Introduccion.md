@@ -1,5 +1,7 @@
 # Cartografía
 
+Theory: 45 min.
+
 La cartografía se define formalmente como:
 
 TODO: buscar definición de cartografía.
@@ -53,6 +55,16 @@ TODO: asimilación de de la cartografía a los gráficos estadísticos
 # Modelos de información geográfica
 
 TODO: explicar el raster y el vectorial
+
+
+
+Tutorial: primer contacto con QGIS:
+
+- abrir el programa. Explicar los elementos básicos del interfaz;
+
+- cargar la ortofoto;
+
+
 
 
 

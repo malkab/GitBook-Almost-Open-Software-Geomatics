@@ -1,11 +1,11 @@
 # Sumario
 
 * [Curso de introducción a los SIG de software libre con Quantum GIS](Curso-Intro_GIS_QGIS/README.md)
-    * [Práctica 01: Sistemas de coordenadas](Curso-Intro_GIS_QGIS/prac01/main.md)
-    * [Práctica 02: Edición de información vectorial](Curso-Intro_GIS_QGIS/prac02/main.md)
-    * [Práctica 3: Selecciones](Curso-Intro_GIS_QGIS/prac03/main.md)
-    * [Práctica 03: Representación y semiología cartográfica](Curso-Intro_GIS_QGIS/prac04/main.md)
-    * [Práctica 05: Servicios interoperables](Curso-Intro_GIS_QGIS/prac05/main.md)
+    * [Práctica 01: Sistemas de coordenadas](Curso-Intro_GIS_QGIS/Unidad_01-Sistemas_referencia/main.md)
+    * [Práctica 02: Edición de información vectorial](Curso-Intro_GIS_QGIS/Unidad_02-Edicion_informacion_vectorial/main.md)
+    * [Práctica 3: Selecciones](Curso-Intro_GIS_QGIS/Unidad_03-Selecciones/main.md)
+    * [Práctica 03: Representación y semiología cartográfica](Curso-Intro_GIS_QGIS/Unidad_04-Semiologia/main.md)
+    * [Práctica 05: Servicios interoperables](Curso-Intro_GIS_QGIS/Unidad_05-Servicios_OGC/main.md)
     * [Práctica 06: Análisis](Curso-Intro_GIS_QGIS/Unidad_06-Analisis/main.md)
 
 * [Máster SIG Universidad de Sevilla](Master_GIS_US/README.md)

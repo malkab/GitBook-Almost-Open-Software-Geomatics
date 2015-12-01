@@ -4,7 +4,7 @@ Prácticas del curso de introducción a los sistemas de información geográfica
 
 El contenido es el siguiente:
 
-<!-- - __[Introducción](00-Introduccion/main.md):__ Introducción. -->
+- __[Introducción](00-Introduccion/main.md):__ Introducción.
 - __[Unidad 01](Unidad_01-Sistemas_referencia/main.md):__ Sistemas de referencia.
 - __[Unidad 02](Unidad_02-Edicion_informacion_vectorial/main.md):__ Almacenamiento, edición, consulta y representación de la información en QGIS.
 - __[Unidad 03](Unidad_03-Selecciones/main.md):__ Selecciones.
